@@ -1,7 +1,9 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = {
   reactStrictMode: true,
-  swcMinify: true,
+  env: {
+    CLOUDFRONT: process.env.CLOUDFRONT
+  },
+  experimental: {
+    outputStandalone: true
+  }
 }
-
-module.exports = nextConfig
